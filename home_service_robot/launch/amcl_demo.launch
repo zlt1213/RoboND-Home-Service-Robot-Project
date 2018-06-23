@@ -1,9 +1,8 @@
-
 <launch>
   <!-- Map server -->
-  <arg name="map_file" default="$(find home_services_robot)/maps/myMap.yaml"/>
-  <arg name="3d_sensor" default="$(env TURTLEBOT_3D_SENSOR)"/>
-  
+  <arg name="map_file" default="$(find home_service_robot)/worlds/maps/myMap.yaml"/>
+  <arg name="3d_sensor" default="kinect"/>
+
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
 
   <!-- Localization -->
